@@ -153,7 +153,7 @@ def load_walksatlm_benchmarks(directory, pattern="instance_benchmark_walksat_lm*
             try:
                 result = json.load(f)
             except JSONDecodeError as e:
-                print(f"json decode error in {walksatlm_result_file.resolve()}")
+                #print(f"json decode error in {walksatlm_result_file.resolve()}")
                 continue
         if "num_trials" in result:
             result["walksatlm_runtime"] = result["num_trials"]
